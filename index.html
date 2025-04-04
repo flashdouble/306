@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 패션</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <p id="fashion">오늘의 패션을 선택해보세요!</p>
+    <button onclick="showRandomFashion()">오늘의 패션 보기</button>
+
+    <script>
+        function showRandomFashion() {
+            const fashions = [
+                "편안한 티셔츠와 청바지",
+                "멋진 블레이저와 슬랙스",
+                "운동화와 트랙 팬츠",
+                "캐주얼한 원피스",
+                "따뜻한 스웨터와 청바지",
+                "깔끔한 셔츠와 면바지"
+            ];
+            document.getElementById("fashion").innerText = fashions[Math.floor(Math.random() * fashions.length)];
+        }
+    </script>
+</body>
+</html>
